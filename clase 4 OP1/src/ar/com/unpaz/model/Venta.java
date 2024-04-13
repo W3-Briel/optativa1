@@ -6,6 +6,10 @@ public class Venta {
 	public int cliente;
 	public int total;
 	
+	public String toString() {
+		return String.format("[ID: %d, Fecha: %s, Cliente: %d, Total: $%d]",
+								this.id,this.fecha,this.cliente,this.total);
+	}
 	
 	public Venta(int id, String fecha, int cliente, int total) {
 		this.id = id;

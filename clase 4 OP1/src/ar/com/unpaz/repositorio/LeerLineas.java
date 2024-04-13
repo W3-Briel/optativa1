@@ -1,5 +1,4 @@
 package ar.com.unpaz.repositorio;
-
 import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileReader;
@@ -7,7 +6,7 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
-public class LeerLineas {
+abstract class LeerLineas {
 	protected List<List<String>> getDatos(String path) {
 		File sFile = new File(path);
 		List<List<String>> datos = new ArrayList<>();

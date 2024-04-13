@@ -1,5 +1,5 @@
 package ar.com.unpaz.model;
-//detalle.txt > idINT VentaINT(id) ProductoINT(id) CantidadINT PrecioFLOAT
+
 public class Detalle {
 	public int id;
 	public int venta;
@@ -7,6 +7,11 @@ public class Detalle {
 	public int cantidad;
 	public int precio;
 	
+	public String toString() {
+		return String.format("[ID: %d, Venta: %d, Producto: %d, Cantidad: %d, Precio: %d]",
+								this.id,this.venta,this.producto,this.cantidad,this.precio);
+	}
+
 	public Detalle(int id, int venta, int producto, int cantidad, int precio) {
 		this.id = id;
 		this.venta = venta;

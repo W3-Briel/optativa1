@@ -6,6 +6,11 @@ public class Producto {
 	public int cantidad;
 	public int precio;
 	
+	public String toString() {
+		return String.format("[ID: %d, Nombre: %s, Cantidad: %d, Precio: $%d]",
+								this.id,this.nombre,this.cantidad,this.precio);
+	}
+	
 	public Producto(int id, String nombre, int cantidad, int precio) {
 		super();
 		this.id = id;

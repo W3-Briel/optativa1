@@ -1,13 +1,16 @@
 package ar.com.unpaz.main;
-import ar.com.unpaz.repositorio.*;
 import ar.com.unpaz.services.*;
+//import ar.com.unpaz.model.Cliente;
+
+import java.util.List;
 
 public class test {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		MostrarClientes hola = new MostrarClientes();
-// 		hola.formmatedData(() -> new Archivo().leerArchivoCliente());
-		System.out.println(hola.formmatedData(new Archivo().leerArchivoCliente()));
+		DTOVenta hola = new DTOVenta();
+		
+		List<Object> venta = hola.formmatedData();
+		System.out.println(venta);
 	}
 }

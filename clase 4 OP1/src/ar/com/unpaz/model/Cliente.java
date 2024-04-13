@@ -5,12 +5,12 @@ public class Cliente {
 	public String nombre;
 	public String apellido;
 	public int telefono;
-	
+
 	public String toString() {
 		return String.format("[ID: %d, Nombre: %s, Apellido: %s, Telefono: %d]",
 								this.id,this.nombre,this.apellido,this.telefono);
 	}
-	
+
 	public Cliente(int id, String nombre, String apellido, int telefono) {
 		this.id = id;
 		this.nombre = nombre;
