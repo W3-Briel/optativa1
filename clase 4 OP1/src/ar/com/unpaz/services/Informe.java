@@ -1,12 +1,15 @@
 package ar.com.unpaz.services;
 import java.util.List;
 import ar.com.unpaz.model.Venta;
-import ar.com.unpaz.model.*;
+import ar.com.unpaz.model.Cliente;
+import ar.com.unpaz.model.InformeAux;
+
 
 public class Informe extends InformeAux implements IInforme{
-	public Informe (int id, List<Object> ventas) {
-		super(id,ventas);
+	public Informe (int id, List<Object> ventas,List<Object> clientes) {
+		super(id,ventas,clientes);
 		this.calcInforme();
+		this.calcNombreVendedor();
 	}
 	
 	private void calcInforme() {
@@ -23,22 +26,25 @@ public class Informe extends InformeAux implements IInforme{
 			}
 		});
 		
-		this.setGanancias(total[0]);
-		this.setTotalVentas(cantidadVentas[0]);
+		this.setTotalGanancias(total[0]);
+		this.setCantidadVentas(cantidadVentas[0]);
 	}
 	
+	private void calcNombreVendedor() {
+		this.getClientes().forEach(obj -> {
+			if(obj instanceof Cliente) {
+				Cliente cliente = (Cliente) obj;
+				if(cliente.getId() == this.id) {
+					this.setNombreVendedor(cliente.getNombre() +" "+ cliente.getApellido());
+				}
+			}
+		});
+	}
+
 	// embed
 	public void embed() {
-		System.out.println("sa");
+		String texto = String.format("{ID: %d, Nombre_Completo: %s, Cantaidad_Ventas: %d, Total_Ganancias: $%d}",
+										this.id,this.nombreVendedor,this.cantidadVentas,this.totalGanancias);
+		System.out.println(texto);
 	}
-
-	@Override
-	public int getTotalGanancias() {
-		return this.getGanancias();
-	}
-
-	@Override
-	public int getCantidadVentas() {
-		return this.getCantidadVentas();
-	};
 }

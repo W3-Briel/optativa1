@@ -11,8 +11,9 @@ public class test {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		List<Object> listObjVenta = new DTOVenta().formmatedData();
-		Informe info = new Informe(1,listObjVenta);
+		List<Object> listObjCliente = new DTOCliente().formmatedData();
+		Informe info = new Informe(111,listObjVenta,listObjCliente);
 		
-		System.out.println(info.getTotalVentas());
+		info.embed();
 	}
 }
