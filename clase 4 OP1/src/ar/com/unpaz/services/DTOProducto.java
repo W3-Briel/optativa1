@@ -7,7 +7,7 @@ import java.util.List;
 //int id, String nombre, int cantidad, int precio
 public class DTOProducto extends FormattedFunction implements IFormatter{
 	public DTOProducto() {
-		this.setDatos(new Archivo().leerArchivoProducto());
+		this.setDatos(new Archivo().leerProductos());
 	}
 	public Object formmated(List<String> dato) {
 		try {

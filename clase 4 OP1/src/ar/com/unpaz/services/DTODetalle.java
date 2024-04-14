@@ -7,7 +7,7 @@ import java.util.List;
 
 public class DTODetalle extends FormattedFunction implements IFormatter{
 	public DTODetalle() {
-		this.setDatos(new Archivo().leerArchivoDetalle());
+		this.setDatos(new Archivo().leerDetalles());
 	}
 	
 	public Object formmated(List<String> dato) {

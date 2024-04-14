@@ -9,7 +9,7 @@ import java.util.List;
 public class DTOCliente extends FormattedFunction implements IFormatter{
 
 	public DTOCliente() {
-		this.setDatos(new Archivo().leerArchivoCliente());
+		this.setDatos(new Archivo().leerClientes());
 	}
 
 	@Override
