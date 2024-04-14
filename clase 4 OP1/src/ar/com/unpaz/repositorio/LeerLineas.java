@@ -10,15 +10,14 @@ abstract class LeerLineas {
 	protected List<List<String>> getDatos(String path) {
 		File sFile = new File(path);
 		List<List<String>> datos = new ArrayList<>();
-		try {
-			BufferedReader sBufferReader = new BufferedReader(new FileReader(sFile));
+		try (BufferedReader sBufferReader = new BufferedReader(new FileReader(sFile))) {
 			String linea = "";
 			while((linea = sBufferReader.readLine()) != null) {
 				List<String> lectura = new ArrayList<String>();
 				lectura.add(linea);
 				datos.add(lectura);
 				}
-		} catch (IOException e) {
+			}catch (IOException e) {
 			e.printStackTrace();
 		}
 		return datos;

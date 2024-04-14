@@ -1,4 +1,6 @@
 package ar.com.unpaz.model;
+
+
 //venta.txt > idINT FechaSTRING ClienteINT(id) TotalFLOAT
 public class Venta {
 	public int id;
@@ -7,7 +9,7 @@ public class Venta {
 	public int total;
 	
 	public String toString() {
-		return String.format("[ID: %d, Fecha: %s, Cliente: %d, Total: $%d]",
+		return String.format("{ID: %d, Fecha: %s, Cliente: %d, Total: $%d}",
 								this.id,this.fecha,this.cliente,this.total);
 	}
 	

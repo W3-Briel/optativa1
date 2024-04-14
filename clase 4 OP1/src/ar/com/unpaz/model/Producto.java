@@ -7,7 +7,7 @@ public class Producto {
 	public int precio;
 	
 	public String toString() {
-		return String.format("[ID: %d, Nombre: %s, Cantidad: %d, Precio: $%d]",
+		return String.format("{ID: %d, Nombre: %s, Cantidad: %d, Precio: $%d}",
 								this.id,this.nombre,this.cantidad,this.precio);
 	}
 	

@@ -1,4 +1,5 @@
 package ar.com.unpaz.model;
+
 //cliente.txt > idINT nombreSTRING apellidoSTRING telefonoINT
 public class Cliente {
 	public int id;
@@ -7,7 +8,7 @@ public class Cliente {
 	public int telefono;
 
 	public String toString() {
-		return String.format("[ID: %d, Nombre: %s, Apellido: %s, Telefono: %d]",
+		return String.format("{ID: %d, Nombre: %s, Apellido: %s, Telefono: %d}",
 								this.id,this.nombre,this.apellido,this.telefono);
 	}
 
