@@ -1,7 +1,7 @@
 package ar.com.unpaz.model;
 
 
-//venta.txt > idINT FechaSTRING ClienteINT(id) TotalFLOAT
+//venta.txt > idINT FechaSTRING ClienteINT(id) TotalINT
 public class Venta {
 	public int id;
 	public String fecha;
