@@ -3,7 +3,7 @@ import services.*;
 
 public class Main {
 
-	public static void main(String[] args) {
+	public static void main(String[] args) throws InterruptedException {
 		// TODO Auto-generated method stub
 		
 		int[] lista1 = {622, 81, 375, 241, 116, 904, 199, 627, 784, 608, 155, 44, 644, 625, 46, 94, 386, 253, 671, 282, 323, 660, 582, 644, 688, 968, 743, 285, 468, 941, 139, 753, 527, 935, 981, 795, 67, 944, 737, 832, 971, 998, 732, 120, 205, 551, 772, 979, 212, 385, 348, 492, 13, 672, 566, 31, 571, 482, 44, 131, 888, 421, 364, 98, 154, 950, 184, 355, 553, 267, 125, 69, 48, 743, 422, 388, 606, 875, 954, 690, 186, 488, 765, 777, 285, 147, 386, 972, 64, 176, 24, 388, 862, 274, 145, 443, 758, 321, 757, 73, 796, 462, 114, 949, 411, 609, 505, 172, 106, 117, 68, 249, 961, 16, 717, 228, 969, 108, 834, 57, 953, 397, 55, 965, 844, 52, 312, 868, 174, 8, 720, 873, 404, 978, 84, 62, 172, 677, 851, 164, 217, 913, 989, 232, 474, 441, 902, 720, 152, 207, 591, 591, 68, 108, 78, 814, 30, 981, 726, 9, 667, 471, 264, 943, 597, 684, 580, 690, 506, 844, 616, 803, 88, 607, 595, 236, 236, 436, 95, 300, 333, 964, 315, 516, 702, 362, 578, 539, 859, 955, 353, 661, 934, 7, 517, 938, 914, 203, 761, 311};
@@ -15,6 +15,14 @@ public class Main {
 		Hilos hilo1 = new Hilos(lista1_partes.getParte1(),lista2_partes.getParte1());
 		Hilos hilo2 = new Hilos(lista1_partes.getParte2(),lista2_partes.getParte2());
 		
-		System.out.println(hilo1.getAcumulador()+hilo2.getAcumulador());
+		hilo1.start();
+		hilo2.start();
+		
+		int[] resultado1= hilo1.getResultado();
+		int[] resultado2= hilo2.getResultado();
+		
+		JuntarListas juntar = new JuntarListas(resultado1,resultado2);
+		juntar.getListasJuntas();
+		
 	}
 }
