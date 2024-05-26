@@ -9,6 +9,7 @@ public class Fixed {
 
 		ExecutorService executor = Executors.newFixedThreadPool(2);
 		
+		
 		Runnable task1 = () -> {
 			System.out.println("tarea 1 ejecutandose en " + Thread.currentThread().getId());
 		};
@@ -18,6 +19,7 @@ public class Fixed {
 		};
 		
 		
+		// ExecutorService inicializa las instancias de hilos. tienen que ser directamente de Runnable
 		executor.submit(task1);
 		executor.submit(task2);
 	}
