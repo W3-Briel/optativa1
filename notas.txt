@@ -1,0 +1,20 @@
+* cambiar el nombre de los metodos de la interfaz, que no diga "archivo"
+ya que se sabe que son archivos por el nombre de la clase
+
+* ver si hace falta cambiar algunos modificadores de privacidad
+
+* ver si podemos encapsular en FormattedFunction el IF que controla el 
+largo de las listas en cada DTO
+
+** capaz haga falta encapsular bastante de la funcion formmated jajajsdf
+
+**** ver si hace falta agregar persistencia almenos a los datos una vez leidos
+es decir, si hace falta crear una variable en memoria que ya guarde los datos.
+porque cada instancia llama denuevo al archivo y esccanea todo.
+
+******* hablando de lo anterior, verificar si la lista esta vacia podria no
+ser la solucion, ya que si editamos el archivo mientras el programa se ejecuta
+nos podria generar inconsistencias.
+
+==============
+
