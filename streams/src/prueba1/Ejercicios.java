@@ -55,9 +55,53 @@ public class Ejercicios {
 		
 		System.out.println(listaResultado);
 	}
+	public static void ejercicio3(){
+		/**Ejercicio 3: Calcular la Suma de Edades de Personas
+		Enunciado:
+		Dada una lista de objetos Persona con atributos nombre y edad, filtra las personas mayores de 18 años y calcula la suma de sus edades.
+		 **/
+		
+		class Persona{
+			public int edad;
+			public String nombre;
+			
+			public Persona(int edad, String nombre) {
+				this.edad = edad;
+				this.nombre = nombre;
+				}
+			public int getEdad() {
+				return edad;
+			}
+			public void setEdad(int edad) {
+				this.edad = edad;
+			}
+			public String getNombre() {
+				return nombre;
+			}
+			public void setNombre(String nombre) {
+				this.nombre = nombre;
+			}
+			
+		}
+		
+		List<Persona> personas = Arrays.asList(new Persona(15,"Paulina"),
+				new Persona(18,"Nelson"),
+				new Persona(21,"Angel"),
+				new Persona(16,"Emir"),
+				new Persona(19,"Dylan"),
+				new Persona(20,"Marto"));
+
+		int acumulador_mayores = personas.stream()
+								.filter(p -> p.getEdad() >= 18)
+								.mapToInt(Persona::getEdad)
+								.sum();
+		
+		System.out.println(acumulador_mayores);
+		
+	}	
 	
 	public static void main(String args[]) {
-		Ejercicios.ejercicio2();
+		Ejercicios.ejercicio3();
 	}
 	
 }
