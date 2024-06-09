@@ -11,11 +11,11 @@ public class Fixed {
 		
 		
 		Runnable task1 = () -> {
-			System.out.println("tarea 1 ejecutandose en " + Thread.currentThread().getId());
+			System.out.println("tarea 1 ejecutandose en ID:" + Thread.currentThread().getId());
 		};
 		
 		Runnable task2 = () -> {
-			System.out.println("tarea 2 ejecutandose en " + Thread.currentThread().getId());
+			System.out.println("tarea 2 ejecutandose en ID:" + Thread.currentThread().getId());
 		};
 		
 		
