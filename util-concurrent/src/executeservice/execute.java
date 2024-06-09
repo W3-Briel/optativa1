@@ -10,7 +10,7 @@ import java.util.concurrent.Executors;
 public class execute {
 
 	public static void main(String[] args) {
-		ExecutorService executor = Executors.newFixedThreadPool(3);
+		ExecutorService executor = Executors.newFixedThreadPool(5);
 
         for (int i = 1; i <= 5; i++) {
             final int taskId = i;

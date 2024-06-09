@@ -19,7 +19,7 @@ public class Fixed {
 		};
 		
 		
-		// ExecutorService inicializa las instancias de hilos. tienen que ser directamente de Runnable
+		// ExecutorService inicializa las instancias de hilos. tienen que ser directamente de Runnable o callable
 		executor.submit(task1);
 		executor.submit(task2);
 	}
